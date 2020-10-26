@@ -1,0 +1,24 @@
+public class Student {
+  String name;
+  int age;
+
+  public Student(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+
+    Student[] students = new Student[4];
+    students[0] = new students("hussein", 27);
+    students[1] = new students("Jena", 2);
+    students[2] = new students("Laya", 1);
+    students[3] = new students("Waeel", 0);
+
+    System.out.println("name:" + students[i].name + "Age:" + students[i].age);
+
+  }
+
+}

@@ -1,0 +1,47 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class SpiralMatrix{
+    public SpiralMatrix(){
+}
+
+/* Name of the class has to be "Main" only if the class is public. */
+	public static void main (String[] args)
+	{
+		int[][] array = {{1,2,3,4},{5,6,7,8},{9,110,11,12},{13,14,15,16}};
+		new SpiralMatrix().printSpiral(array);
+		
+	}
+	
+	 void printSpiral(int[][] array){
+	    int firstRow = 0;
+	    int lastRow = array.length;
+	    int firstCol = 0;
+	    int lastCol = array[0].length;
+	    
+	    while(firstRow<lastRow && firstCol<lastCol){
+	        
+	        for(int i=firstCol;i<=lastCol;i++){
+	            System.out.println(array[firstRow][i]);
+	        }
+	        
+	        for(int i=firstRow+1;i<lastRow;i++){
+	            System.out.println(array[i][lastCol]);
+	        }
+	        
+	        for(int i = lastCol-1;i>=firstCol;i--){
+	            System.out.println(array[lastRow][i]);
+	        }
+	        for(int i=lastRow-1;i>firstCol;i--){
+	            System.out.println(array[i][firstCol]);
+	        }
+	        
+	        firstRow++;
+	        lastRow--;
+	        firstCol++;
+	        lastCol--;
+	    } 
+	}
+}
